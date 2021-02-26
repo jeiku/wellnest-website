@@ -282,6 +282,286 @@ header .logo a h1 span {
           box-shadow: 0 0 1rem #333;
 }
 
+#about {
+  height: auto;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#about .image {
+  margin: 5rem 15rem;
+}
+
+#about .image img {
+  width: 30rem;
+}
+
+#about .content {
+  width: 90vw;
+}
+
+#about .content h1 {
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  font-size: 4rem;
+  margin: 3rem 0;
+  color: #34bda4;
+}
+
+#about .content p {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  padding-right: 6rem;
+}
+
+#about .content .buttons {
+  padding-right: 2rem;
+}
+
+#about .content .buttons button {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: 0.2rem solid #34bda4;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #34bda4;
+  font-weight: bold;
+  margin: 2rem 2rem 2rem 0;
+}
+
+#about .content .buttons button:hover {
+  background: #34bda4;
+  color: #fff;
+}
+
+#gallery {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: auto;
+  width: 100vw;
+  background: #f7f7f7;
+}
+
+#gallery h1 {
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 4rem;
+  color: #34bda4;
+  margin: 2rem 0;
+}
+
+#gallery .image-container {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#gallery .image-container .image {
+  height: 25rem;
+  width: 30rem;
+  margin: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+#gallery .image-container .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#gallery .image-container .image .info {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#gallery .image-container .image .info button {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: 0.2rem solid #34bda4;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #34bda4;
+  font-weight: bold;
+}
+
+#gallery .image-container .image .info button:hover {
+  background: #34bda4;
+  color: #fff;
+}
+
+#gallery .image-container .image:hover .info {
+  bottom: 0%;
+}
+
+#contact {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  background: url(./images/back-img.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: url(./images/back-img.jpg), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+#contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+#contact form h1 {
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  color: #34bda4;
+  font-size: 4rem;
+}
+
+#contact form input {
+  height: 4rem;
+  background: transparent;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  border: 0.2rem solid #34bda4;
+  outline: none;
+  color: #fff;
+  width: 40vw;
+}
+
+#contact form input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input:-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input::-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form input::placeholder {
+  color: #ccc;
+}
+
+#contact form input:focus {
+  background: #34bda4;
+}
+
+#contact form input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#contact form input[type="submit"] {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  height: 4rem;
+  width: 14rem;
+  background: transparent;
+  border: 0.2rem solid #34bda4;
+  outline: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #34bda4;
+  font-weight: bold;
+  background: #34bda4;
+  color: #fff;
+}
+
+#contact form input[type="submit"]:hover {
+  background: #34bda4;
+  color: #fff;
+}
+
+#contact form input[type="submit"]:hover {
+  background: transparent;
+}
+
+#contact form textarea {
+  resize: none;
+  background: transparent;
+  outline: none;
+  padding: 1rem;
+  color: #fff;
+  border: 0.2rem solid #34bda4;
+}
+
+#contact form textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+#contact form textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form textarea::-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact form textarea::placeholder {
+  color: #ccc;
+}
+
+#contact form textarea:focus {
+  background: #34bda4;
+}
+
+#contact .image img {
+  height: 80vh;
+  width: 30vw;
+  margin-top: 16rem;
+}
+
 .fa-times {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
@@ -303,6 +583,33 @@ header .logo a h1 span {
 @media (max-width: 768px) {
   html {
     font-size: 40%;
+  }
+  #about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about .image img {
+    width: 70vw;
+  }
+  #about .content {
+    text-align: center;
+  }
+  #about .content p {
+    padding: 2rem;
+  }
+  #about .content .buttons {
+    padding: 0;
+  }
+  #contact .image {
+    display: none;
+  }
+  #contact form input {
+    width: 90vw;
   }
 }
 

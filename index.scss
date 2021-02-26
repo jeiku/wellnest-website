@@ -261,6 +261,201 @@ header {
   }
 }
 
+#about {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+
+  .image {
+    margin: 5rem 15rem;
+
+    img {
+      width: 30rem;
+    }
+  }
+
+  .content {
+    width: 90vw;
+
+    h1 {
+      font-family: "Dancing Script", cursive;
+      // font-weight: 300;
+      text-transform: capitalize;
+      font-size: 4rem;
+      margin: 3rem 0;
+      color: $blue;
+    }
+
+    p {
+      font-family: "Kanit", sans-serif;
+      font-weight: 300;
+      font-size: 2rem;
+      padding-right: 6rem;
+    }
+
+    .buttons {
+      padding-right: 2rem;
+
+      button {
+        @include button();
+        margin: 2rem 2rem 2rem 0;
+      }
+    }
+  }
+}
+
+#gallery {
+  display: grid;
+  place-items: center;
+  height: auto;
+  width: 100vw;
+  background: #f7f7f7;
+
+  h1 {
+    font-family: "Dancing Script", cursive;
+    // font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 4rem;
+    color: $blue;
+    margin: 2rem 0;
+  }
+
+  .image-container {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .image {
+      height: 25rem;
+      width: 30rem;
+      margin: 2rem;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .info {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+
+        button {
+          @include button();
+        }
+      }
+
+      &:hover .info {
+        bottom: 0%;
+      }
+    }
+  }
+}
+
+#contact {
+  height: 100vh;
+  width: 100vw;
+  // padding: 8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  background: url(./images/back-img.jpg),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+
+  form {
+    display: flex;
+    flex-flow: column;
+
+    h1 {
+      font-family: "Dancing Script", cursive;
+      // font-weight: 300;
+      text-transform: capitalize;
+      color: $blue;
+      font-size: 4rem;
+    }
+
+    input {
+      // font-family: "Kanit", sans-serif;
+      // font-weight: 300;
+      height: 4rem;
+      background: transparent;
+      margin: 2rem 0;
+      padding: 0 1rem;
+      border: 0.2rem solid $blue;
+      outline: none;
+      color: #fff;
+      width: 40vw;
+
+      &::placeholder {
+        color: #ccc;
+      }
+
+      &:focus {
+        background: $blue;
+      }
+    }
+
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+
+    input[type="submit"] {
+      @include button();
+      background: $blue;
+      color: #fff;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    textarea {
+      // font-family: "Kanit", sans-serif;
+      // font-weight: 300;
+      resize: none;
+      background: transparent;
+      outline: none;
+      padding: 1rem;
+      color: #fff;
+      border: 0.2rem solid $blue;
+
+      &::placeholder {
+        color: #ccc;
+      }
+
+      &:focus {
+        background: $blue;
+      }
+    }
+  }
+
+  .image {
+    img {
+      height: 80vh;
+      width: 30vw;
+      margin-top: 16rem;
+    }
+  }
+}
+
 .fa-times {
   transform: rotateZ(180deg);
 }
@@ -280,6 +475,41 @@ header {
 @media (max-width: 768px) {
   html {
     font-size: 40%;
+  }
+
+  #about {
+    flex-flow: column;
+    align-items: center;
+
+    .image {
+      img {
+        width: 70vw;
+      }
+    }
+
+    .content {
+      text-align: center;
+
+      p {
+        padding: 2rem;
+      }
+
+      .buttons {
+        padding: 0;
+      }
+    }
+  }
+
+  #contact {
+    .image {
+      display: none;
+    }
+
+    form {
+      input {
+        width: 90vw;
+      }
+    }
   }
 }
 
